@@ -1,0 +1,139 @@
+
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface CFCSysConst : NSObject
+
+#pragma mark 控件间隔常量
+UIKIT_EXTERN CGFloat const MARGIN;
+
+#pragma mark 最小浮点常量
+UIKIT_EXTERN CGFloat const FLOAT_MIN;
+
+#pragma mark 标签栏高度(系统默认高度为49)
+UIKIT_EXTERN CGFloat const TAB_BAR_HEIGHT;
+
+#pragma mark 标签栏高度 - 危险区域
+#define TAB_BAR_DANGER_HEIGHT (CFC_IS_IPHONE_X_OR_GREATER?34.0:0.0)
+
+#pragma mark 标签栏+危险区高度(系统默认为83或49)
+#define TAB_BAR_AND_DANGER_HEIGHT (CFC_IS_IPHONE_X_OR_GREATER?83.0:49.0)
+
+#pragma mark 导航条高度
+UIKIT_EXTERN CGFloat const NAVIGATION_BAR_HEIGHT;
+
+#pragma mark 状态栏高度(系统默认为44或20)
+#define STATUS_BAR_HEIGHT (CFC_IS_IPHONE_X_OR_GREATER?44.0:20.0)
+
+#pragma mark 状态栏+导航条高度(系统默认为88或64)
+#define STATUS_NAVIGATION_BAR_HEIGHT (CFC_IS_IPHONE_X_OR_GREATER?88.0:64.0)
+
+#pragma mark 导航条底部发丝线(系统默认高度为1.0)
+UIKIT_EXTERN CGFloat const NAVIGATION_BAR_HAIR_LINE_HEIGHT_ZERO;
+UIKIT_EXTERN CGFloat const NAVIGATION_BAR_HAIR_LINE_HEIGHT_DEFAULT;
+
+#pragma mark 导航条按钮与屏幕边距
+UIKIT_EXTERN CGFloat const NAVIGATION_BAR_SCREEN_MARGIN;
+
+#pragma mark 导航条左右按钮最大宽度
+UIKIT_EXTERN CGFloat const NAVIGATION_BAR_BUTTON_MAX_WIDTH;
+
+#pragma mark 导航条左右按钮图标宽度
+UIKIT_EXTERN CGFloat const NAVIGATION_BAR_BUTTON_IMAGE_SIZE;
+
+#pragma mark 导航条标题字数限制
+UIKIT_EXTERN CGFloat const NAVIGATION_BAR_TITLE_MAX_NUM;
+
+#pragma mark 系统分割线默认高度
+UIKIT_EXTERN CGFloat const SEPARATOR_LINE_HEIGHT;
+
+#pragma mark 系统全局按钮高度
+UIKIT_EXTERN CGFloat const SYSTEM_GLOBAL_BUTTON_HEIGHT;
+
+#pragma mark 全屏右滑返回左边手势允许的最大距离
+UIKIT_EXTERN CGFloat const FULLSCREEN_POP_GESTURE_MAX_DISTANCE_TO_LEFT_EDGE;
+
+
+#pragma mark 通用间隔高度
+UIKIT_EXTERN CGFloat const SEPARTOR_MARGIN_HEIGHT;
+
+#pragma mark 游戏大厅-菜单CELL固定高度
+UIKIT_EXTERN CGFloat const GAMES_MALL_MENU_CELL_HEIGHT;
+
+#pragma mark 游戏大厅-内容CELL固定高度
+UIKIT_EXTERN CGFloat const GAMES_MALL_CONTENT_CELL_HEIGHT;
+
+#pragma mark 悬浮按钮宽度
+UIKIT_EXTERN CGFloat const CHAT_MESSAGE_FLOAT_BUTTON_WIDTH;
+UIKIT_EXTERN CGFloat const CHAT_MESSAGE_FLOAT_BUTTON_HEIGHT;
+
+#pragma mark 悬浮按钮尺寸
+UIKIT_EXTERN CGFloat const FULL_SUSPEND_BALL_SIZE;
+
+#pragma mark 请求超时
+UIKIT_EXTERN CGFloat const NET_REQUEST_TIMEOUTINTERVAL;
+
+#pragma mark 空白图片尺寸
+UIKIT_EXTERN CGFloat const SCROLL_EMPTY_DATASET_SCALE;
+
+
+#pragma mark TabBar 主页对应下标
+UIKIT_EXTERN NSInteger const TABBAR_INDEX_MESSAGE;
+UIKIT_EXTERN NSInteger const TABBAR_INDEX_RECHARGE;
+UIKIT_EXTERN NSInteger const TABBAR_INDEX_GAMEHALL;
+UIKIT_EXTERN NSInteger const TABBAR_INDEX_CONTACTS;
+UIKIT_EXTERN NSInteger const TABBAR_INDEX_MYCENTER;
+
+
+#pragma mark 键盘功能按钮标识
+/**
+tag = 2000  <===>  福利
+tag = 2001  <===>  加盟
+tag = 2002  <===>  红包
+tag = 2003  <===> 充值
+tag = 2004  <===>  玩法
+tag = 2005  <===>  群规
+
+tag = 2006  <===>  帮助
+tag = 2007  <===>  客服
+tag = 2008  <===>  照片
+tag = 2009  <===>  拍照
+tag = 2010  <===>  赚钱
+
+tag = 2011  <===>  转账
+tag = 2012  <===>  期数记录
+tag = 2013  <===>  投注记录
+tag = 2014  <===>  提款
+tag = 2015  <===>  余额宝
+
+tag = 2016  <===>  二维码
+tag = 2017  <===>  视频
+*/
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_FULI;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_JIAMENG;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_REDPACKET;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_RECHARGE;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_PALY_RULE;
+//
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_GROUP_RULE;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_HELPER;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_CUSTOMER;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_PHOTO;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_CARAMER;
+//
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_ERANMONEY;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_TRANSFER_MONEY;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_ISSUE_RECORDS;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_BETTING_RECORDS;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_DRAW_MONEY;
+//
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_YUEBAO;
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_QRCODE;
+
+UIKIT_EXTERN CGFloat const KEYBOARD_FUNCTION_UUID_VIDEO;
+
+
+@end
+
+NS_ASSUME_NONNULL_END
